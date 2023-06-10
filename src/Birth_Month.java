@@ -14,6 +14,7 @@ class BirthMonth
      return
 EndClass
  */
+
 import java.util.Scanner;
 public class Birth_Month {
     public static void main(String[]args)
@@ -22,20 +23,25 @@ public class Birth_Month {
 
 
         int birthMonth = 0;
+        String trash = "";
+
+
+
         System.out.print("What is your birth month? (1-12) ");
-        if(in.hasNextInt()){
+        if(in.hasNextInt())
+        {
             birthMonth = in.nextInt();
             in.nextLine();
-        } else {
-            birthMonth = 13;
-            System.out.println("That is not a valid birth number! ");
-            in.nextLine();
+            if(birthMonth <= 12 && birthMonth >= 1){
+                System.out.println("You said that your birth month is " + birthMonth);
+            } else if (birthMonth > 12 || birthMonth < 1)
+            {
+                System.out.println("That is not a valid birth number! " + birthMonth);
+            }
+        } else
+        {
+            trash = in.nextLine();
+            System.out.println("That is not a valid birth number! " + trash);
         }
-        if(birthMonth <= 12 && birthMonth >= 1){
-            System.out.println("You said that your birth month is " + birthMonth);
-        } else if (birthMonth < 1 || birthMonth > 12 && birthMonth != 13){
-            System.out.println("That is not a valid birth number! " + birthMonth);
-        }
-
     }
 }

@@ -2,8 +2,9 @@
 /*
 class BirthMonth
     main()
+        int birthMonth
         output “What is your birth month? (1-12)”
-        input num birthMonth
+        input birthMonth
         if brithMonth is <= 12 then
             if birthMonth >= 1 then
             output “Your birth month is “ + birthMonth
@@ -13,6 +14,7 @@ class BirthMonth
         endIf
      return
 EndClass
+
  */
 
 import java.util.Scanner;
